@@ -1,6 +1,8 @@
 # Flicks
 Movie Rental System
+
 Flicks is a private organization which allows people to rent movies for its registered and paid customers. Movies that can be rented can be of different languages and in each language customers can choose different genres of movies. This company wants a web based application which can be used by customers to rent the movies on-line and their internal teams like Admin and clerks to use the application to manage the movie catalog which will be presented to the customer who want to rent the movies. Below are the requirements for the specified web site.
+
 •	User should be able to search for different movies based on language and genres.
 •	User once he logins in successfully to his account should be presented with the top ten movies that are currently being rented by other people.
 •	User should be classified as silver, gold and platinum category where Silver type of user can borrow total of 2 movies, gold can borrow 3 movies and platinum user can borrow 5 movies as maximum movies currently rented. No more rental is allowed if the limit is reached
