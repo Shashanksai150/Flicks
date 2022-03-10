@@ -9,8 +9,8 @@ namespace MovieEntity
 
 	public class Movie
 	{
-		int _ID;
-		public int MovieID
+		string _ID;
+		public string MovieID
 		{
 			get { return _ID; }
 			set
@@ -37,15 +37,15 @@ namespace MovieEntity
 			}
 		}
 
-		int year;
-		public int Year
+		int _Mnum;
+		public int Mnum
 		{
-			get { return year; }
+			get { return _Mnum; }
 			set
 			{
 				try
 				{
-					year = value;
+					_Mnum = value;
 				}
 				catch (Exception ex) { throw ex; }
 			}
@@ -78,6 +78,21 @@ namespace MovieEntity
 				catch (Exception ex) { throw ex; }
 			}
 		}
+
+		int year;
+		public int Year
+		{
+			get { return year; }
+			set
+			{
+				try
+				{
+					year = value;
+				}
+				catch (Exception ex) { throw ex; }
+			}
+		}
+
 
 		decimal _Rating;
 		public decimal Rating
@@ -121,6 +136,20 @@ namespace MovieEntity
 			}
 		}
 
+		double BRP;
+		public double Bluerayprice
+		{
+			get { return BRP; }
+			set
+			{
+				try
+				{
+					BRP = value;
+				}
+				catch (Exception ex) { throw ex; }
+			}
+		}
+
 		int TUR;
 		public int TotalUnitsrented
 		{
@@ -135,19 +164,6 @@ namespace MovieEntity
 			}
 		}
 
-		double BRP;
-		public double Bluerayprice
-		{
-			get { return BRP; }
-			set
-			{
-				try
-				{
-					BRP = value;
-				}
-				catch (Exception ex) { throw ex; }
-			}
-		}
 
 		double RG;
 		public double RevenueGenerated

@@ -17,10 +17,14 @@ namespace MovieDAL
             bool status = false;
             string cnstring = "Data Source=SHARKTOP-96\\SQLEXPRESS;Initial Catalog=Flicks;Integrated Security=True";
             SqlConnection cn = new SqlConnection(cnstring);
-            SqlCommand cmd = new SqlCommand("Sp_AddBlogger", cn);
-            cmd.Parameters.AddWithValue("@BloggerID", blogger.BloggerID);
-            cmd.Parameters.AddWithValue("@BloggerName", blogger.BloggerName);
-            cmd.Parameters.AddWithValue("@BloggerSubject", blogger.BloggerSubject);
+            SqlCommand cmd = new SqlCommand("sp_InsertMovie", cn);
+            cmd.Parameters.AddWithValue("@Title", movie.Title);
+            cmd.Parameters.AddWithValue("@year", movie.Year );
+            cmd.Parameters.AddWithValue("@Language", movie.Language);
+            cmd.Parameters.AddWithValue("@Genres", movie.Genres);
+            cmd.Parameters.AddWithValue("@BlueRayPrice", movie.Bluerayprice);
+            cmd.Parameters.AddWithValue("@Rating", movie.Rating);
+            cmd.Parameters.AddWithValue("@TS", movie.TotalStock);
 
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -58,12 +62,16 @@ namespace MovieDAL
         public bool UpdateMovie(Movie movie)
         {
             bool status = false;
-            string cnstring = "Data Source=SHARKTOP-96\\SQLEXPRESS;Initial Catalog=CapgTDB;Integrated Security=True";
+            string cnstring = "Data Source=SHARKTOP-96\\SQLEXPRESS;Initial Catalog=Flicks;Integrated Security=True";
             SqlConnection cn = new SqlConnection(cnstring);
-            SqlCommand cmd = new SqlCommand("Sp_UpdateBlogger", cn);
-            cmd.Parameters.AddWithValue("@BloggerID", blogger.BloggerID);
-            cmd.Parameters.AddWithValue("@BloggerName", blogger.BloggerName);
-            cmd.Parameters.AddWithValue("@BloggerSubject", blogger.BloggerSubject);
+            SqlCommand cmd = new SqlCommand("Sp_UpdateMovie", cn);
+            cmd.Parameters.AddWithValue("@Title", movie.Title);
+            cmd.Parameters.AddWithValue("@year", movie.Year);
+            cmd.Parameters.AddWithValue("@Language", movie.Language);
+            cmd.Parameters.AddWithValue("@Genres", movie.Genres);
+            cmd.Parameters.AddWithValue("@BlueRayPrice", movie.Bluerayprice);
+            cmd.Parameters.AddWithValue("@Rating", movie.Rating);
+            cmd.Parameters.AddWithValue("@TS", movie.TotalStock);
 
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -102,7 +110,7 @@ namespace MovieDAL
             bool status = false;
             string cnstring = "Data Source=SHARKTOP-96\\SQLEXPRESS;Initial Catalog=CapgTDB;Integrated Security=True";
             SqlConnection cn = new SqlConnection(cnstring);
-            SqlCommand cmd = new SqlCommand("delete from Blogger where BloggerID=" + ID, cn);
+            SqlCommand cmd = new SqlCommand("delete from Movies where MovieID=" + ID + "or Mnum = " + ID, cn);
             try
             {
                 cn.Open();
@@ -135,10 +143,10 @@ namespace MovieDAL
 
         public Movie GetMovie(int ID)
         {
-            Blogger blogger = null;
-            string cnstring = "Data Source=SHARKTOP-96\\SQLEXPRESS;Initial Catalog=CapgTDB;Integrated Security=True";
+            Movie movie = null;
+            string cnstring = "Data Source=SHARKTOP-96\\SQLEXPRESS;Initial Catalog=Flicks;Integrated Security=True";
             SqlConnection cn = new SqlConnection(cnstring);
-            SqlCommand cmd = new SqlCommand("select * from Blogger where BloggerID = " + ID, cn);
+            SqlCommand cmd = new SqlCommand("select * from Movies where Mnum = " + ID + "or MovieID = " + ID, cn);
 
             try
             {
@@ -146,11 +154,20 @@ namespace MovieDAL
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    blogger = new Blogger()
+                    movie = new Movie()
                     {
-                        BloggerID = (int)dr[0],
-                        BloggerName = (string)dr[1],
-                        BloggerSubject = (string)dr[2],
+                        MovieID = (string)dr[0],
+                        Title = (string)dr[1],
+                        Mnum = (int)dr[2],
+                        Language = (string)dr[3],
+                        Genres = (string)dr[4],
+                        Year = (int)dr[5],
+                        Rating = (int)dr[6],
+                        StocKavailable = (int)dr[7],
+                        TotalStock = (int)dr[8],
+                        Bluerayprice = (int)dr[9],
+                        TotalUnitsrented = (int)dr[10],
+                        RevenueGenerated = (int)dr[11]
                     };
 
                 }
@@ -174,29 +191,38 @@ namespace MovieDAL
                 cn.Dispose();
             }
 
-            return blogger;
+            return movie;
         }
 
         public List<Movie> GetAllMovies()
         {
-            string cnstring = "Data Source=SHARKTOP-96\\SQLEXPRESS;Initial Catalog=CapgTDB;Integrated Security=True";
+            string cnstring = "Data Source=SHARKTOP-96\\SQLEXPRESS;Initial Catalog=Flicks;Integrated Security=True";
             SqlConnection cn = new SqlConnection(cnstring);
-            SqlCommand cmd = new SqlCommand("select * from Blogger", cn);
+            SqlCommand cmd = new SqlCommand("select * from Movies", cn);
 
-            List<Blogger> list = new List<Blogger>();
+            List<Movie> list = new List<Movie>();
             try
             {
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    Blogger blogger = new Blogger()
+                    Movie movie = new Movie()
                     {
-                        BloggerID = (int)dr[0],
-                        BloggerName = (string)dr[1],
-                        BloggerSubject = (string)dr[2],
+                        MovieID = (string)dr[0],
+                        Title = (string)dr[1],
+                        Mnum = (int)dr[2],
+                        Language = (string)dr[3],
+                        Genres = (string)dr[4],
+                        Year = (int)dr[5],
+                        Rating = (int)dr[6],
+                        StocKavailable = (int)dr[7],
+                        TotalStock = (int)dr[8],
+                        Bluerayprice = (int)dr[9],
+                        TotalUnitsrented = (int)dr[10],
+                        RevenueGenerated = (int)dr[11]
                     };
-                    list.Add(blogger);
+                    list.Add(movie);
                 }
 
             }
