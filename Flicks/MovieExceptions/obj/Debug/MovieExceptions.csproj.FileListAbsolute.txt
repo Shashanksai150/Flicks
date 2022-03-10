@@ -1,0 +1,6 @@
+E:\sprint1\Flicks\Flicks\MovieExceptions\bin\Debug\MovieExceptions.dll
+E:\sprint1\Flicks\Flicks\MovieExceptions\bin\Debug\MovieExceptions.pdb
+E:\sprint1\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.csproj.CoreCompileInputs.cache
+E:\sprint1\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.dll
+E:\sprint1\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.pdb

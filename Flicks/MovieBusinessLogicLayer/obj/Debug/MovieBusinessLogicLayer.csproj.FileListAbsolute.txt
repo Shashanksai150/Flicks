@@ -1,0 +1,6 @@
+E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieBusinessLogicLayer.dll
+E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieBusinessLogicLayer.pdb
+E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.csproj.CoreCompileInputs.cache
+E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.dll
+E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.pdb

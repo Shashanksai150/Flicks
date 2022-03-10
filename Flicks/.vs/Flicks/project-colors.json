@@ -10,7 +10,32 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "c2a65f02-899d-422a-85fe-fa4e3f01a6c5": {
+      "ProjectGuid": "c2a65f02-899d-422a-85fe-fa4e3f01a6c5",
+      "DisplayName": "MovieBusinessLogicLayer",
+      "ColorIndex": 1
+    },
+    "fdba499c-759a-4ee0-a69f-c26699be1909": {
+      "ProjectGuid": "fdba499c-759a-4ee0-a69f-c26699be1909",
+      "DisplayName": "CRentity",
+      "ColorIndex": 2
+    },
+    "c39527fc-5058-4053-85a7-647405ddc2d4": {
+      "ProjectGuid": "c39527fc-5058-4053-85a7-647405ddc2d4",
+      "DisplayName": "CRexception",
+      "ColorIndex": 3
+    },
+    "2467f35a-2b90-4cfc-8295-fd252520039b": {
+      "ProjectGuid": "2467f35a-2b90-4cfc-8295-fd252520039b",
+      "DisplayName": "CRDAL",
+      "ColorIndex": 4
+    },
+    "2dc4b0f7-b883-4730-aa5d-cec5f760c2b5": {
+      "ProjectGuid": "2dc4b0f7-b883-4730-aa5d-cec5f760c2b5",
+      "DisplayName": "CRBAL",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 6
 }
