@@ -1,0 +1,6 @@
+E:\sprint1\Flicks\Flicks\MovieDAL\bin\Debug\MovieDAL.dll
+E:\sprint1\Flicks\Flicks\MovieDAL\bin\Debug\MovieDAL.pdb
+E:\sprint1\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.csproj.CoreCompileInputs.cache
+E:\sprint1\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.dll
+E:\sprint1\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.pdb

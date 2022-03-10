@@ -1,0 +1,11 @@
+E:\sprint1\Flicks\Flicks\customerDAL\bin\Debug\customerDAL.dll
+E:\sprint1\Flicks\Flicks\customerDAL\bin\Debug\customerDAL.pdb
+E:\sprint1\Flicks\Flicks\customerDAL\bin\Debug\customerEntity.dll
+E:\sprint1\Flicks\Flicks\customerDAL\bin\Debug\customerException.dll
+E:\sprint1\Flicks\Flicks\customerDAL\bin\Debug\customerEntity.pdb
+E:\sprint1\Flicks\Flicks\customerDAL\bin\Debug\customerException.pdb
+E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.csproj.CoreCompileInputs.cache
+E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.csproj.CopyComplete
+E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.dll
+E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.pdb
