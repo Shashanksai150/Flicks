@@ -1,0 +1,8 @@
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\Flicks.exe.config
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\Flicks.exe
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\Flicks.pdb
+E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.csproj.SuggestedBindingRedirects.cache
+E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.csproj.CoreCompileInputs.cache
+E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.exe
+E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.pdb
