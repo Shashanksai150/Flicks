@@ -11,3 +11,16 @@ E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.csproj.CoreCompileInp
 E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.csproj.CopyComplete
 E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.dll
 E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.pdb
+D:\sprint\Flicks\Flicks\customerBAL\bin\Debug\customerBAL.dll
+D:\sprint\Flicks\Flicks\customerBAL\bin\Debug\customerBAL.pdb
+D:\sprint\Flicks\Flicks\customerBAL\bin\Debug\customerDAL.dll
+D:\sprint\Flicks\Flicks\customerBAL\bin\Debug\customerEntity.dll
+D:\sprint\Flicks\Flicks\customerBAL\bin\Debug\customerException.dll
+D:\sprint\Flicks\Flicks\customerBAL\bin\Debug\customerDAL.pdb
+D:\sprint\Flicks\Flicks\customerBAL\bin\Debug\customerEntity.pdb
+D:\sprint\Flicks\Flicks\customerBAL\bin\Debug\customerException.pdb
+D:\sprint\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.csproj.AssemblyReference.cache
+D:\sprint\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.csproj.CopyComplete
+D:\sprint\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.dll
+D:\sprint\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.pdb

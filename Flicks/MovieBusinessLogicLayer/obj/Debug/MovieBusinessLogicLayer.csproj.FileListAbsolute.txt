@@ -4,3 +4,16 @@ E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLay
 E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.csproj.CoreCompileInputs.cache
 E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.dll
 E:\sprint1\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.pdb
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieBusinessLogicLayer.dll
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieBusinessLogicLayer.pdb
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieDAL.dll
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieEntity.dll
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieExceptions.dll
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieDAL.pdb
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieEntity.pdb
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\bin\Debug\MovieExceptions.pdb
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.csproj.AssemblyReference.cache
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.csproj.CopyComplete
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.dll
+D:\sprint\Flicks\Flicks\MovieBusinessLogicLayer\obj\Debug\MovieBusinessLogicLayer.pdb

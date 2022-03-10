@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="..\CRBAL\CRBAL.csproj">
       <Project>{2dc4b0f7-b883-4730-aa5d-cec5f760c2b5}</Project>
       <Name>CRBAL</Name>
@@ -65,14 +66,19 @@
     <ProjectReference Include="..\customerBAL\customerBAL.csproj">
       <Project>{f38f3914-96c5-44b6-8f69-82c1009e11bf}</Project>
       <Name>customerBAL</Name>
+=======
+    <ProjectReference Include="..\MovieBusinessLogicLayer\MovieBusinessLogicLayer.csproj">
+      <Project>{c2a65f02-899d-422a-85fe-fa4e3f01a6c5}</Project>
+      <Name>MovieBusinessLogicLayer</Name>
+>>>>>>> 39112b844a34dea9eb6764fc9adc47652d9e5667
     </ProjectReference>
-    <ProjectReference Include="..\customerEntity\customerEntity.csproj">
-      <Project>{edeb8857-04f3-47de-8599-037e48b64244}</Project>
-      <Name>customerEntity</Name>
+    <ProjectReference Include="..\MovieEntity\MovieEntity.csproj">
+      <Project>{658d5b89-14ef-4d64-b481-0fde6788f209}</Project>
+      <Name>MovieEntity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\customerException\customerException.csproj">
-      <Project>{6d334eb7-4f99-481a-90d8-b58ada1f8c9a}</Project>
-      <Name>customerException</Name>
+    <ProjectReference Include="..\MovieExceptions\MovieExceptions.csproj">
+      <Project>{a91a467c-8498-41d2-9b2b-b06bb51ab3c2}</Project>
+      <Name>MovieExceptions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

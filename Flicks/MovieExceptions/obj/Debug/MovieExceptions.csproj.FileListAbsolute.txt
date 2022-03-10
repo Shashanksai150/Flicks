@@ -4,3 +4,9 @@ E:\sprint1\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.csproj.Assemb
 E:\sprint1\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.csproj.CoreCompileInputs.cache
 E:\sprint1\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.dll
 E:\sprint1\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.pdb
+D:\sprint\Flicks\Flicks\MovieExceptions\bin\Debug\MovieExceptions.dll
+D:\sprint\Flicks\Flicks\MovieExceptions\bin\Debug\MovieExceptions.pdb
+D:\sprint\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.csproj.AssemblyReference.cache
+D:\sprint\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.dll
+D:\sprint\Flicks\Flicks\MovieExceptions\obj\Debug\MovieExceptions.pdb

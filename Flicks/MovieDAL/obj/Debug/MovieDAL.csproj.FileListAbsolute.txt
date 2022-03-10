@@ -4,3 +4,14 @@ E:\sprint1\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.csproj.AssemblyReference.ca
 E:\sprint1\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.csproj.CoreCompileInputs.cache
 E:\sprint1\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.dll
 E:\sprint1\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.pdb
+D:\sprint\Flicks\Flicks\MovieDAL\bin\Debug\MovieDAL.dll
+D:\sprint\Flicks\Flicks\MovieDAL\bin\Debug\MovieDAL.pdb
+D:\sprint\Flicks\Flicks\MovieDAL\bin\Debug\MovieEntity.dll
+D:\sprint\Flicks\Flicks\MovieDAL\bin\Debug\MovieExceptions.dll
+D:\sprint\Flicks\Flicks\MovieDAL\bin\Debug\MovieEntity.pdb
+D:\sprint\Flicks\Flicks\MovieDAL\bin\Debug\MovieExceptions.pdb
+D:\sprint\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.csproj.AssemblyReference.cache
+D:\sprint\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.csproj.CopyComplete
+D:\sprint\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.dll
+D:\sprint\Flicks\Flicks\MovieDAL\obj\Debug\MovieDAL.pdb

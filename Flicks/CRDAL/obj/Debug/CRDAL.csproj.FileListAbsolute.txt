@@ -1,0 +1,11 @@
+D:\sprint\Flicks\Flicks\CRDAL\bin\Debug\CRDAL.dll
+D:\sprint\Flicks\Flicks\CRDAL\bin\Debug\CRDAL.pdb
+D:\sprint\Flicks\Flicks\CRDAL\bin\Debug\CRentity.dll
+D:\sprint\Flicks\Flicks\CRDAL\bin\Debug\CRexception.dll
+D:\sprint\Flicks\Flicks\CRDAL\bin\Debug\CRentity.pdb
+D:\sprint\Flicks\Flicks\CRDAL\bin\Debug\CRexception.pdb
+D:\sprint\Flicks\Flicks\CRDAL\obj\Debug\CRDAL.csproj.AssemblyReference.cache
+D:\sprint\Flicks\Flicks\CRDAL\obj\Debug\CRDAL.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\CRDAL\obj\Debug\CRDAL.csproj.CopyComplete
+D:\sprint\Flicks\Flicks\CRDAL\obj\Debug\CRDAL.dll
+D:\sprint\Flicks\Flicks\CRDAL\obj\Debug\CRDAL.pdb

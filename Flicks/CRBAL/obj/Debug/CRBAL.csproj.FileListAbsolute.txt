@@ -1,0 +1,13 @@
+D:\sprint\Flicks\Flicks\CRBAL\bin\Debug\CRBAL.dll
+D:\sprint\Flicks\Flicks\CRBAL\bin\Debug\CRBAL.pdb
+D:\sprint\Flicks\Flicks\CRBAL\bin\Debug\CRDAL.dll
+D:\sprint\Flicks\Flicks\CRBAL\bin\Debug\CRentity.dll
+D:\sprint\Flicks\Flicks\CRBAL\bin\Debug\CRexception.dll
+D:\sprint\Flicks\Flicks\CRBAL\bin\Debug\CRDAL.pdb
+D:\sprint\Flicks\Flicks\CRBAL\bin\Debug\CRentity.pdb
+D:\sprint\Flicks\Flicks\CRBAL\bin\Debug\CRexception.pdb
+D:\sprint\Flicks\Flicks\CRBAL\obj\Debug\CRBAL.csproj.AssemblyReference.cache
+D:\sprint\Flicks\Flicks\CRBAL\obj\Debug\CRBAL.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\CRBAL\obj\Debug\CRBAL.csproj.CopyComplete
+D:\sprint\Flicks\Flicks\CRBAL\obj\Debug\CRBAL.dll
+D:\sprint\Flicks\Flicks\CRBAL\obj\Debug\CRBAL.pdb

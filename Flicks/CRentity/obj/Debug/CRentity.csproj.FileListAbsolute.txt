@@ -1,0 +1,9 @@
+D:\sprint\Flicks\Flicks\CRentity\bin\Debug\CRentity.dll
+D:\sprint\Flicks\Flicks\CRentity\bin\Debug\CRentity.pdb
+D:\sprint\Flicks\Flicks\CRentity\bin\Debug\CRexception.dll
+D:\sprint\Flicks\Flicks\CRentity\bin\Debug\CRexception.pdb
+D:\sprint\Flicks\Flicks\CRentity\obj\Debug\CRentity.csproj.AssemblyReference.cache
+D:\sprint\Flicks\Flicks\CRentity\obj\Debug\CRentity.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\CRentity\obj\Debug\CRentity.csproj.CopyComplete
+D:\sprint\Flicks\Flicks\CRentity\obj\Debug\CRentity.dll
+D:\sprint\Flicks\Flicks\CRentity\obj\Debug\CRentity.pdb

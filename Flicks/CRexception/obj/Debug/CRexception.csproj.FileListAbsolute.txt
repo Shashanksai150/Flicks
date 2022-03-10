@@ -1,0 +1,5 @@
+D:\sprint\Flicks\Flicks\CRexception\bin\Debug\CRexception.dll
+D:\sprint\Flicks\Flicks\CRexception\bin\Debug\CRexception.pdb
+D:\sprint\Flicks\Flicks\CRexception\obj\Debug\CRexception.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\CRexception\obj\Debug\CRexception.dll
+D:\sprint\Flicks\Flicks\CRexception\obj\Debug\CRexception.pdb

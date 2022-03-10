@@ -9,3 +9,14 @@ E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.csproj.CoreCompileInp
 E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.csproj.CopyComplete
 E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.dll
 E:\sprint1\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.pdb
+D:\sprint\Flicks\Flicks\customerDAL\bin\Debug\customerDAL.dll
+D:\sprint\Flicks\Flicks\customerDAL\bin\Debug\customerDAL.pdb
+D:\sprint\Flicks\Flicks\customerDAL\bin\Debug\customerEntity.dll
+D:\sprint\Flicks\Flicks\customerDAL\bin\Debug\customerException.dll
+D:\sprint\Flicks\Flicks\customerDAL\bin\Debug\customerEntity.pdb
+D:\sprint\Flicks\Flicks\customerDAL\bin\Debug\customerException.pdb
+D:\sprint\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.csproj.AssemblyReference.cache
+D:\sprint\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.csproj.CoreCompileInputs.cache
+D:\sprint\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.csproj.CopyComplete
+D:\sprint\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.dll
+D:\sprint\Flicks\Flicks\customerDAL\obj\Debug\customerDAL.pdb
