@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieEntity", "MovieEntity\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieBusinessLogicLayer", "MovieBusinessLogicLayer\MovieBusinessLogicLayer.csproj", "{C2A65F02-899D-422A-85FE-FA4E3F01A6C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDAL", "MovieDAL\MovieDAL.csproj", "{8BE6CA03-E6C4-4917-8920-891A3EE4A470}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDataAccessLayer", "MovieDAL\MovieDataAccessLayer.csproj", "{8BE6CA03-E6C4-4917-8920-891A3EE4A470}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieExceptions", "MovieExceptions\MovieExceptions.csproj", "{A91A467C-8498-41D2-9B2B-B06BB51AB3C2}"
 EndProject

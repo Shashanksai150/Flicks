@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MoviesBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MovieDAL\MovieDAL.csproj">
+    <ProjectReference Include="..\MovieDAL\MovieDataAccessLayer.csproj">
       <Project>{8be6ca03-e6c4-4917-8920-891a3ee4a470}</Project>
-      <Name>MovieDAL</Name>
+      <Name>MovieDataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\MovieEntity\MovieEntity.csproj">
       <Project>{658d5b89-14ef-4d64-b481-0fde6788f209}</Project>

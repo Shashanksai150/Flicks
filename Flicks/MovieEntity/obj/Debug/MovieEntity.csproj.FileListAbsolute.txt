@@ -9,3 +9,12 @@ D:\sprint\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.csproj.CoreCompileInpu
 D:\sprint\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.csproj.CopyComplete
 D:\sprint\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.dll
 D:\sprint\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.pdb
+D:\Flicks\Flicks\Flicks\MovieEntity\bin\Debug\MovieEntity.dll
+D:\Flicks\Flicks\Flicks\MovieEntity\bin\Debug\MovieEntity.pdb
+D:\Flicks\Flicks\Flicks\MovieEntity\bin\Debug\MovieExceptions.dll
+D:\Flicks\Flicks\Flicks\MovieEntity\bin\Debug\MovieExceptions.pdb
+D:\Flicks\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.csproj.AssemblyReference.cache
+D:\Flicks\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.csproj.CoreCompileInputs.cache
+D:\Flicks\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.csproj.CopyComplete
+D:\Flicks\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.dll
+D:\Flicks\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.pdb
