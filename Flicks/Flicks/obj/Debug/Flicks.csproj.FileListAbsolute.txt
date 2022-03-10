@@ -6,3 +6,10 @@ E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.csproj.SuggestedBindingRedirect
 E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.csproj.CoreCompileInputs.cache
 E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.exe
 E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.pdb
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\customerBAL.dll
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\customerEntity.dll
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\customerException.dll
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\customerBAL.pdb
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\customerEntity.pdb
+E:\sprint1\Flicks\Flicks\Flicks\bin\Debug\customerException.pdb
+E:\sprint1\Flicks\Flicks\Flicks\obj\Debug\Flicks.csproj.CopyComplete

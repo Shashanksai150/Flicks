@@ -1,0 +1,2 @@
+E:\sprint1\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\MovieEntity\obj\Debug\MovieEntity.csproj.CoreCompileInputs.cache

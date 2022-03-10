@@ -1,0 +1,9 @@
+E:\sprint1\Flicks\Flicks\customerEntity\bin\Debug\customerEntity.dll
+E:\sprint1\Flicks\Flicks\customerEntity\bin\Debug\customerEntity.pdb
+E:\sprint1\Flicks\Flicks\customerEntity\bin\Debug\customerException.dll
+E:\sprint1\Flicks\Flicks\customerEntity\bin\Debug\customerException.pdb
+E:\sprint1\Flicks\Flicks\customerEntity\obj\Debug\customerEntity.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\customerEntity\obj\Debug\customerEntity.csproj.CoreCompileInputs.cache
+E:\sprint1\Flicks\Flicks\customerEntity\obj\Debug\customerEntity.csproj.CopyComplete
+E:\sprint1\Flicks\Flicks\customerEntity\obj\Debug\customerEntity.dll
+E:\sprint1\Flicks\Flicks\customerEntity\obj\Debug\customerEntity.pdb

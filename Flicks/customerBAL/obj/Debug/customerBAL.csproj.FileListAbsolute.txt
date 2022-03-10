@@ -1,0 +1,13 @@
+E:\sprint1\Flicks\Flicks\customerBAL\bin\Debug\customerBAL.dll
+E:\sprint1\Flicks\Flicks\customerBAL\bin\Debug\customerBAL.pdb
+E:\sprint1\Flicks\Flicks\customerBAL\bin\Debug\customerDAL.dll
+E:\sprint1\Flicks\Flicks\customerBAL\bin\Debug\customerEntity.dll
+E:\sprint1\Flicks\Flicks\customerBAL\bin\Debug\customerException.dll
+E:\sprint1\Flicks\Flicks\customerBAL\bin\Debug\customerDAL.pdb
+E:\sprint1\Flicks\Flicks\customerBAL\bin\Debug\customerEntity.pdb
+E:\sprint1\Flicks\Flicks\customerBAL\bin\Debug\customerException.pdb
+E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.csproj.CoreCompileInputs.cache
+E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.csproj.CopyComplete
+E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.dll
+E:\sprint1\Flicks\Flicks\customerBAL\obj\Debug\customerBAL.pdb

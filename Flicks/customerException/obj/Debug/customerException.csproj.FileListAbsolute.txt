@@ -1,0 +1,6 @@
+E:\sprint1\Flicks\Flicks\customerException\bin\Debug\customerException.dll
+E:\sprint1\Flicks\Flicks\customerException\bin\Debug\customerException.pdb
+E:\sprint1\Flicks\Flicks\customerException\obj\Debug\customerException.csproj.AssemblyReference.cache
+E:\sprint1\Flicks\Flicks\customerException\obj\Debug\customerException.csproj.CoreCompileInputs.cache
+E:\sprint1\Flicks\Flicks\customerException\obj\Debug\customerException.dll
+E:\sprint1\Flicks\Flicks\customerException\obj\Debug\customerException.pdb
