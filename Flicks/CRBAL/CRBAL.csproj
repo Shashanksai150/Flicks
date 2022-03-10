@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F34F4FD7-DA1B-4C58-807C-9850249C462B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Flicks</RootNamespace>
-    <AssemblyName>Flicks</AssemblyName>
+    <ProjectGuid>{2DC4B0F7-B883-4730-AA5D-CEC5F760C2B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRBAL</RootNamespace>
+    <AssemblyName>CRBAL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,16 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CRBAL\CRBAL.csproj">
-      <Project>{2dc4b0f7-b883-4730-aa5d-cec5f760c2b5}</Project>
-      <Name>CRBAL</Name>
+    <ProjectReference Include="..\CRDAL\CRDAL.csproj">
+      <Project>{2467f35a-2b90-4cfc-8295-fd252520039b}</Project>
+      <Name>CRDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\CRentity\CRentity.csproj">
       <Project>{fdba499c-759a-4ee0-a69f-c26699be1909}</Project>
@@ -61,18 +56,6 @@
     <ProjectReference Include="..\CRexception\CRexception.csproj">
       <Project>{c39527fc-5058-4053-85a7-647405ddc2d4}</Project>
       <Name>CRexception</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\customerBAL\customerBAL.csproj">
-      <Project>{f38f3914-96c5-44b6-8f69-82c1009e11bf}</Project>
-      <Name>customerBAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\customerEntity\customerEntity.csproj">
-      <Project>{edeb8857-04f3-47de-8599-037e48b64244}</Project>
-      <Name>customerEntity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\customerException\customerException.csproj">
-      <Project>{6d334eb7-4f99-481a-90d8-b58ada1f8c9a}</Project>
-      <Name>customerException</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
