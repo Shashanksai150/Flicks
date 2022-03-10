@@ -8,7 +8,7 @@ create table Movies
 (
 	[Movie ID] varchar(10) primary key not null,
 	Title varchar(30) not null,
-	CID int unique not null IDENTITY(1,1),
+	Mnum int unique not null IDENTITY(1,1),
 	[Language] varchar(10) not null,
 	Genres varchar(10),
 	[Year] int,
@@ -31,13 +31,13 @@ create PROCEDURE [dbo].[sp_InsertMovie]
 	@BlueRayPrice money,
 	@Rating decimal,
 	@TS smallint,
-	@CID int
+	@Mnum int
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-	set @MID = substring(SOUNDEX(@Title) ,1 , 2) + substring(@Language,1,2) + substring(@Language,1,1) + @CID;
+	set @MID = substring(SOUNDEX(@Title) ,1 , 2) + substring(@Language,1,2) + substring(@Language,1,1) + @Mnum;
     -- Insert statements for procedure here
 	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock]) values(@MID,@Title,@Language,@year,@Genres,@BlueRayPrice,@Rating,@TS);
 END
