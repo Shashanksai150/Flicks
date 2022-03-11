@@ -9,8 +9,8 @@ create table Movies
 	[Movie ID] varchar(10) primary key not null,
 	Title varchar(30) not null,
 	Mnum int unique not null IDENTITY(1,1),
-	[Language] varchar(10) not null,
-	Genres varchar(10),
+	[Language] varchar(30) not null,
+	Genres varchar(30),
 	[Year] int,
 	Rating decimal,
 	[Stock Available] smallint,
@@ -19,26 +19,44 @@ create table Movies
 	[Total Units rented] smallint,
 	[Revenue Generated] money
 )
+go
+    -- Insert statements for procedure here
+	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
+	values('A1EnSc','Avatar','English',2009,'Sci-fi/Action',1310.00,7.9,50,50);
+go
+	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
+	values('T3EnRo','Titanic','English',1997,'Romance/Drama',1010.05,7.9,100,100);	
+go
+	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
+	values('I5EnSc','Inception','English',2010,'Sci-fi/Action',565.05,8.8,60,60);
+go
+	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
+	values('T5EnSc','Tenet','English',2020,'Sci-fi/Action',565.05,7.4,40,40);
+go
+Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
+	values('I5EnAd','Interstellar','English',2014,'Adventure/Sci-fi',999.05,8.7,90,90);
+select * from Movies
+
 
 go
 create PROCEDURE [dbo].[sp_InsertMovie]
 	-- Add the parameters for the stored procedure here
 	@Title varchar(30),
-	@MID varchar(6),
 	@year int,
 	@Language varchar(10),
 	@Genres varchar(10),
 	@BlueRayPrice money,
 	@Rating decimal,
-	@TS smallint,
-	@Mnum int
+	@TS smallint
+	
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-	set @MID = substring(SOUNDEX(@Title) ,1 , 2) + substring(@Language,1,2) + substring(@Language,1,1) + @Mnum;
-    -- Insert statements for procedure here
+	declare @MID varchar(10)
+	select @MID = substring(SOUNDEX(@Title) ,1 , 2) + substring(@Language,1,2) + substring(@Genres,1,2); 
+	-- Insert statements for procedure here
 	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock]) values(@MID,@Title,@Language,@year,@Genres,@BlueRayPrice,@Rating,@TS);
 END
 
@@ -64,7 +82,6 @@ AS
 	where [Movie ID] = @MID;
 RETURN 0
 
-
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 go
@@ -77,25 +94,25 @@ create table Customers
 	Category varchar(1) not null,
 	[Movies Rented] int not null,
 	EmailID varchar(20) unique not null,
-	BirthDate DateTime,
 	[Address] varchar(60) not null,
 	[City] varchar(15) not null,
 	[Region] varchar(15) not null,
 	[PostalCode] varchar(10) not null,
 	[Country] varchar(15) not null
 )
+go
+Insert into Customers([Mobile Number],Password,Name,Category,[Movies Rented],EmailID,Address,City,Region,PostalCode,Country) 
+	values('8921254251','klm784de45!2%','Sham','P',3,'Sham938@gmail.com','Hno 41, Kindle srt','Nagpur','Maharastra','441414','India');
 
 go
 create PROCEDURE [dbo].[sp_InsertCustomers]
 	-- Add the parameters for the stored procedure here
 	@MobileNumber varchar(10),
 	@Password varchar(15),
-	@CID varchar(6) ,
 	@Name varchar(50),
 	@Category varchar(1),
 	@MR int,
 	@EmailID varchar(20),
-	@BirthDate DateTime,
 	@Address varchar(60),
 	@City varchar(15),
 	@Region varchar(15),
@@ -108,20 +125,19 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	Insert into Customers([Mobile Number],Password,Name,Category,[Movies Rented],EmailID,BirthDate,Address,City,Region,PostalCode,Country) 
-	values(@MobileNumber,@Password,@Name,@Category,@MR,@EmailID,@BirthDate,@Address,@City,@Region,@PostalCode,@Country);
+	Insert into Customers([Mobile Number],Password,Name,Category,[Movies Rented],EmailID,Address,City,Region,PostalCode,Country) 
+	values(@MobileNumber,@Password,@Name,@Category,@MR,@EmailID,@Address,@City,@Region,@PostalCode,@Country);
 END
 
 go
 CREATE PROCEDURE [dbo].Sp_UpdateCustomers
 	@MobileNumber varchar(10),
 	@Password varchar(15),
-	@CID varchar(6) ,
 	@Name varchar(50),
+	@CID int,
 	@Category varchar(1),
 	@MR int,
 	@EmailID varchar(20),
-	@BirthDate DateTime,
 	@Address varchar(60),
 	@City varchar(15),
 	@Region varchar(15),
@@ -134,7 +150,6 @@ AS
 	Category = @Category,
 	[Movies Rented] = @MR,
 	EmailID = @EmailID,
-	BirthDate = @BirthDate,
 	Address = @Address,
 	City = @City,
 	Region = @Region,
@@ -142,6 +157,7 @@ AS
 	Country = @Country
 	where [Mobile Number] = @MobileNumber or CID = @CID;
 RETURN 0
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -153,24 +169,32 @@ create table Admin
 	Name varchar(50) not null,
 	Adminnum int not null unique IDENTITY(1,1)
 )
-
+go
+Insert into Admin(AdminID,Password,Name) values('Judy4151','Judy','kdjme3234');
+go
+Insert into Admin(AdminID,Password,Name) values('Blake3451','Blake','flaked3102');
+go
+Insert into Admin(AdminID,Password,Name) values('Jane1894','Jane','mvkd212334@!');
+go
+Insert into Admin(AdminID,Password,Name) values('Sham31475','Sham','duillsdj4762');
+go
+Insert into Admin(AdminID,Password,Name) values('Ramu7451','Ramu','ramjjf54815');
+go
+select * from Admin
 go
 create PROCEDURE [dbo].[sp_InsertAdmin]
 	-- Add the parameters for the stored procedure here
 	@AdminID varchar(10),
-	@Password varchar(15),
 	@Name varchar(50),
-	@NUM int
-AS
+	@Password varchar(15)
+	AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-	set @AdminID =  SUBSTRING(@Name,1,3) + @NUM 
     -- Insert statements for procedure here
 	Insert into Admin(AdminID,Password,Name) values(@AdminID,@Password,@Name);
 END
-
 go
 CREATE PROCEDURE [dbo].Sp_UpdateAdmin
 	@AdminID varchar(10),
@@ -198,18 +222,20 @@ create table [Currently Rented]
 go
 create PROCEDURE [dbo].[sp_InsertCR]
 	-- Add the parameters for the stored procedure here
-	@RentID varchar(16),
 	@MID varchar(10), 
 	@MN varchar(10),
-	@RentDT DateTime,
-	@num int
+	@RentDT DateTime
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-	set @RentID = @MID + @num;
+	declare @RentID varchar(20), @TS smallint , @midt varchar(10);
+	set @RentID = @MID + substring(@MN,1,3);
 	SET @RentDT = CURRENT_TIMESTAMP;
+
+	SELECT @TS = [Total Stock], @midt = [Movie ID] FROM Movies as m where m.[Movie ID] = @MID
+	update Movies set [Stock Available] = [Stock Available] - 1, [Total Units rented] = [Total Units rented] + 1 where @MID = @midt
     -- Insert statements for procedure here
 	Insert into [Currently Rented] (RentID,MID,[Mobile Number],[Rented DateTime]) values(@RentID,@MID,@MN,@RentDT);
 END
@@ -221,6 +247,12 @@ CREATE PROCEDURE [dbo].Sp_UpdateCR
 	@MN varchar(10),
 	@RentDT DateTime
 AS
+declare @TS smallint , @midt varchar(10);
+	set @RentID = @MID + substring(@MN,1,3);
+	SET @RentDT = CURRENT_TIMESTAMP;
+
+	SELECT @TS = [Total Stock], @midt = [Movie ID] FROM Movies as m where m.[Movie ID] = @MID
+	update Movies set [Stock Available] = [Stock Available] - 1, [Total Units rented] = [Total Units rented] + 1 where @MID = @midt
 	UPDATE [Movies Rented]
 	Set  MID = @MID,
 	[Mobile Number] = @MN,
@@ -239,48 +271,57 @@ create table [Movies Rented]
 	[Mobile Number] varchar(10) unique not null Foreign key references Customers,
 	[Rented DateTime] DateTime not null ,
 	[Returned DateTime] DateTime not null,
+	[Days Rented] int,
 	[Rent Amount] money not null,
+	[Returned] bit,
     [Paid Or Not] bit not null, 
 )
 
 go
 create PROCEDURE [dbo].[sp_InsertMR]
 	-- Add the parameters for the stored procedure here
-	@RentID varchar(10),
-	@MID varchar(10), 
-	@MN varchar(10),
-	@RentDT DateTime,
-	@ReturnDT DateTime,
-	@RentAmount money,
-    @PON bit,
-	@CRTD DateTime
+	@RentID varchar(16),
+	@Returned bit,
+    @PON bit
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
-	Select @RentDT = [Rented DateTime] from [Currently Rented] as cr where cr.[Rented DateTime] = @RentDT;
-	Select @RentID = RentID from [Currently Rented] as cr where cr.RentID = @RentID;
+	declare @RentAmount money,@BRP money, @RentDT DateTime, @DaysR int,@MID varchar(10),@MN varchar(10),@ReturnDT DateTime;
+	Select @RentID = RentID,@RentDT = [Rented DateTime],@MID = MID,@MN = [Mobile Number] from [Currently Rented] as cr where cr.RentID = @RentID;
+	select @BRP =[BlueRay Price] from Movies as m where m.[Movie ID] = @MID 
+
 	SET NOCOUNT ON;
-	SET @RentDT = @CRTD;
+	SET @ReturnDT = CURRENT_TIMESTAMP  while (@Returned = 1)
+	set @DaysR = Datediff(day ,@RentDT,@ReturnDT) while (@Returned = 1)
+	set @RentAmount = ((@DaysR * (@BRP * 0.1)) * 1.8) while (@Returned = 1)
+	update Movies set [Revenue Generated] = [Revenue Generated] + @BRP where [Movie ID] = @MID and @PON = 1 and @Returned = 1
     -- Insert statements for procedure here
-	Insert into [Movies Rented] (RentID,MID,[Mobile Number],[Rented DateTime],[Returned DateTime],[Rent Amount],[Paid Or Not]) values(@RentID,@MID,@MN,@RentDT,@ReturnDT,@RentAmount,@PON);
+	Insert into [Movies Rented] (RentID,MID,[Mobile Number],[Rented DateTime],[Returned DateTime],[Rent Amount],[Paid Or Not]) 
+	values(@RentID,@MID,@MN,@RentDT,@ReturnDT,@RentAmount,@PON);
 END
 
 go
 CREATE PROCEDURE [dbo].Sp_UpdateMR
 	@RentID varchar(10),
-	@MID varchar(6), 
-	@MN varchar(10),
-	@RentDT DateTime,
-	@ReturnDT DateTime,
-	@RentAmount money,
+	@Returned bit,
     @PON bit
 AS
+	declare @RentAmount money,@BRP money, @RentDT DateTime, @DaysR int,@MID varchar(10),@MN varchar(10),@ReturnDT DateTime;
+	Select @RentID = RentID,@RentDT = [Rented DateTime],@MID = MID,@MN = [Mobile Number] from [Currently Rented] as cr where cr.RentID = @RentID;
+	select @BRP =[BlueRay Price] from Movies as m where m.[Movie ID] = @MID
+
+	SET NOCOUNT ON;
+	SET @ReturnDT = CURRENT_TIMESTAMP  while (@Returned = 1)
+	set @DaysR = Datediff(day ,@RentDT,@ReturnDT) while (@Returned = 1)
+	set @RentAmount = ((@DaysR * (@BRP * 0.1)) * 1.8) while (@Returned = 1)
+	update Movies set [Revenue Generated] = [Revenue Generated] + @BRP where [Movie ID] = @MID and @Returned = 1
 	UPDATE [Movies Rented]
 	Set  MID = @MID,
 	[Mobile Number] = @MN,
 	[Rented DateTime] = @RentDT,
 	[Returned DateTime] = @ReturnDT,
+	[Returned] = @Returned,
 	[Rent Amount] = @RentAmount,
 	[Paid Or Not] = @PON
 	where @RentID = RentID;
