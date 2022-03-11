@@ -1,3 +1,4 @@
+go
 use master
 go
 CREATE DATABASE Flicks
@@ -19,6 +20,8 @@ create table Movies
 	[Total Units rented] smallint,
 	[Revenue Generated] money
 )
+go
+    -- Insert statements for procedure here
 SET IDENTITY_INSERT [dbo].[Movies] ON
 INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [Year], [Rating], [Stock Available], [Total Stock], [BlueRay Price], [Total Units rented], [Revenue Generated]) VALUES (N'A1EnSc', N'Avatar', 1, N'English', N'Sci-fi/Action', 2009, CAST(8 AS Decimal(18, 0)), 25, 50, CAST(1310.0000 AS Money), 500, CAST(10000.0000 AS Money))
 INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [Year], [Rating], [Stock Available], [Total Stock], [BlueRay Price], [Total Units rented], [Revenue Generated]) VALUES (N'I5EnAd', N'Interstellar', 5, N'English', N'Adventure/Sci-fi', 2014, CAST(9 AS Decimal(18, 0)), 90, 90, CAST(999.0500 AS Money), 158, CAST(9151.5500 AS Money))
@@ -27,7 +30,7 @@ INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [
 INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [Year], [Rating], [Stock Available], [Total Stock], [BlueRay Price], [Total Units rented], [Revenue Generated]) VALUES (N'T5EnSc', N'Tenet', 4, N'English', N'Sci-fi/Action', 2020, CAST(7 AS Decimal(18, 0)), 40, 40, CAST(565.0500 AS Money), 485, CAST(15415.5200 AS Money))
 SET IDENTITY_INSERT [dbo].[Movies] OFF
 select * from Movies
-
+go
 
 go
 create PROCEDURE [dbo].[sp_InsertMovie]
@@ -72,7 +75,7 @@ AS
 	[Total Stock] = @TS
 	where [Movie ID] = @MID;
 RETURN 0
-
+go
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 go
@@ -83,6 +86,8 @@ create table Customers
 	CID int unique not null IDENTITY(1,1),
 	Name varchar(50) not null,
 	Category varchar(1) not null,
+	[Last Password] DateTime ,
+	[Password Limit Reached] bit,
 	[Movies Rented] int not null,
 	EmailID varchar(20) unique not null,
 	[Address] varchar(60) not null,
@@ -103,6 +108,8 @@ create PROCEDURE [dbo].[sp_InsertCustomers]
 	@Name varchar(50),
 	@Category varchar(1),
 	@MR int,
+	@LastPasschanged DateTime,
+	@PLR bit,
 	@EmailID varchar(20),
 	@Address varchar(60),
 	@City varchar(15),
@@ -114,7 +121,8 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
+	set @LastPasschanged = CURRENT_TIMESTAMP;
+	set @PLR = 0;
     -- Insert statements for procedure here
 	Insert into Customers([Mobile Number],Password,Name,Category,[Movies Rented],EmailID,Address,City,Region,PostalCode,Country) 
 	values(@MobileNumber,@Password,@Name,@Category,@MR,@EmailID,@Address,@City,@Region,@PostalCode,@Country);
@@ -149,6 +157,30 @@ AS
 	where [Mobile Number] = @MobileNumber or CID = @CID;
 RETURN 0
 
+go
+create procedure [dbo].Sp_PasswordResetCustomer
+@number varchar(10),
+@Paswordnew varchar(15)
+as
+update Customers 
+set [Password] = @Paswordnew,
+	[Last Password] = CURRENT_TIMESTAMP,
+	[Password Limit Reached] = 0
+where [Mobile Number] = @number;
+return 0;
+
+go
+CREATE PROCEDURE [dbo].Sp_PasswordValidityCustomer
+@number varchar(10),
+@Today DateTime
+AS
+Declare @Lastpasswordreset DateTime;
+Select @Lastpasswordreset = [Last Password] from Customers where @number = [Mobile Number];
+set @Today = CURRENT_TIMESTAMP;
+if ( abs(DATEDIFF(day,@Lastpasswordreset,@Today)) >= 30 )
+update [Customers] set [Password Limit Reached] = 1 where @number = [Mobile Number];
+Return 0
+go
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -158,7 +190,9 @@ create table Admin
 	AdminID varchar(10) primary key not null,
 	[Password] varchar(15) not null,
 	Name varchar(50) not null,
-	Adminnum int not null unique IDENTITY(1,1)
+	Adminnum int not null unique IDENTITY(1,1),
+	[Last Password] DateTime ,
+	[Password Limit Reached] bit
 )
 go
 Insert into Admin(AdminID,Password,Name) values('Judy4151','Judy','kdjme3234');
@@ -177,27 +211,62 @@ create PROCEDURE [dbo].[sp_InsertAdmin]
 	-- Add the parameters for the stored procedure here
 	@AdminID varchar(10),
 	@Name varchar(50),
-	@Password varchar(15)
+	@Password varchar(15),
+	@LastPasschanged DateTime,
+	@PLR bit
 	AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
     -- Insert statements for procedure here
-	Insert into Admin(AdminID,Password,Name) values(@AdminID,@Password,@Name);
+	set @LastPasschanged = CURRENT_TIMESTAMP;
+	set @PLR = 0;
+	Insert into Admin(AdminID,Password,Name,[Password Limit Reached],[Last Password]) values(@AdminID,@Password,@Name,@PLR,@LastPasschanged);
 END
+
 go
 CREATE PROCEDURE [dbo].Sp_UpdateAdmin
 	@AdminID varchar(10),
 	@Password varchar(15),
-	@Name varchar(50)
+	@Name varchar(50),
+	@LastPasschanged DateTime,
+	@PLR bit
 AS
+set @LastPasschanged = CURRENT_TIMESTAMP;
+	set @PLR = 0;
 	UPDATE Admin
 	Set  Name = @Name,
-	Password = @Password
+	Password = @Password,
+	[Last Password] = @LastPasschanged,
+	[Password Limit Reached] = @PLR
 	where @AdminID = AdminID;
 RETURN 0
 
+go
+create procedure [dbo].Sp_PasswordResetAdmin
+@AdminID varchar(10),
+@Paswordnew varchar(15)
+as
+update Admin
+set [Password] = @Paswordnew,
+	[Last Password] = CURRENT_TIMESTAMP,
+	[Password Limit Reached] = 0
+where @AdminID = AdminID;
+return 0;
+
+go
+CREATE PROCEDURE [dbo].Sp_PasswordvalidityAdmin
+@AdminID varchar(10),
+@Today DateTime
+AS
+Declare @Lastpasswordreset DateTime;
+Select @Lastpasswordreset = [Last Password] from Admin where AdminID = @AdminID;
+set @Today = CURRENT_TIMESTAMP;
+if ( abs(DATEDIFF(day,@Lastpasswordreset,@Today)) >= 30 )
+update Admin set [Password Limit Reached] = 1 where AdminID = @AdminID;
+Return 0
+go
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 go
@@ -244,15 +313,15 @@ declare @TS smallint , @midt varchar(10);
 
 	SELECT @TS = [Total Stock], @midt = [Movie ID] FROM Movies as m where m.[Movie ID] = @MID
 	update Movies set [Stock Available] = [Stock Available] - 1, [Total Units rented] = [Total Units rented] + 1 where @MID = @midt
-	UPDATE [Movies Rented]
+	UPDATE[Currently Rented]
 	Set  MID = @MID,
 	[Mobile Number] = @MN,
 	[Rented DateTime] = @RentDT
 	where @RentID = RentID;
 RETURN 0
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+go
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 go
 create table [Movies Rented]
