@@ -16,9 +16,9 @@ create table Movies
 	Rating decimal,
 	[Stock Available] smallint,
 	[Total Stock] smallint,
-	[BlueRay Price] money,
+	[BlueRay Price] money default 0.0,
 	[Total Units rented] smallint,
-	[Revenue Generated] money
+	[Revenue Generated] money default 0.0
 )
 go
     -- Insert statements for procedure here
@@ -82,7 +82,7 @@ go
 create table Customers 
 (
 	[Mobile Number] varchar(10) primary key not null,
-	[Password] varchar(15) not null,
+	[Password] varchar(15) not null unique,
 	CID int unique not null IDENTITY(1,1),
 	Name varchar(50) not null,
 	Category varchar(1) not null,
@@ -97,8 +97,13 @@ create table Customers
 	[Country] varchar(15) not null
 )
 go
-Insert into Customers([Mobile Number],Password,Name,Category,[Movies Rented],EmailID,Address,City,Region,PostalCode,Country) 
-	values('8921254251','klm784de45!2%','Sham','P',3,'Sham938@gmail.com','Hno 41, Kindle srt','Nagpur','Maharastra','441414','India');
+SET IDENTITY_INSERT [dbo].[Customers] ON
+INSERT INTO [dbo].[Customers] ([Mobile Number], [Password], [CID], [Name], [Category], [Last Password], [Password Limit Reached], [Movies Rented], [EmailID], [Address], [City], [Region], [PostalCode], [Country]) VALUES (N'4851578912', N'dgsjsjs555#$', 4, N'Bruce', N'P', N'2022-02-21 02:40:00', 0, 4, N'Bruce0938@gmail.com', N'Hno 41, Kindle srt', N'Nagpur', N'Maharastra', N'441414', N'India')
+INSERT INTO [dbo].[Customers] ([Mobile Number], [Password], [CID], [Name], [Category], [Last Password], [Password Limit Reached], [Movies Rented], [EmailID], [Address], [City], [Region], [PostalCode], [Country]) VALUES (N'7451512684', N'sha784&', 2, N'John', N'G', N'2022-03-16 18:15:00', 1, 1, N'johe382@gmail.com', N'43 rue St. Laurent', N'Montréal', N'Québec', N'H1J 1C3', N'Canada')
+INSERT INTO [dbo].[Customers] ([Mobile Number], [Password], [CID], [Name], [Category], [Last Password], [Password Limit Reached], [Movies Rented], [EmailID], [Address], [City], [Region], [PostalCode], [Country]) VALUES (N'8921254251', N'klm784de45!2$', 1, N'Sham', N'P', N'2022-01-27 00:40:00', 0, 3, N'Sham938@gmail.com', N'2, rue du Commerce', N'Lyon', N'Lyon', N'69004', N'France')
+INSERT INTO [dbo].[Customers] ([Mobile Number], [Password], [CID], [Name], [Category], [Last Password], [Password Limit Reached], [Movies Rented], [EmailID], [Address], [City], [Region], [PostalCode], [Country]) VALUES (N'9745114562', N'dkck$&*4555', 5, N'Donny', N'P', N'2022-02-08 21:10:00', 0, 3, N'donny38741@gmail.com', N'2743 Bering St.', N'Anchorage', N'AK', N'99508', N'USA')
+INSERT INTO [dbo].[Customers] ([Mobile Number], [Password], [CID], [Name], [Category], [Last Password], [Password Limit Reached], [Movies Rented], [EmailID], [Address], [City], [Region], [PostalCode], [Country]) VALUES (N'9845512354', N'45sfvswg!*&', 3, N'May', N'S', N'2022-01-21 02:50:00', 1, 2, N'May368@gmail.com', N'Magazinweg 7', N'Frankfurt a.M.', N'Frankfurt a.M.', N'60528', N'Germany')
+SET IDENTITY_INSERT [dbo].[Customers] OFF
 
 go
 create PROCEDURE [dbo].[sp_InsertCustomers]
@@ -195,17 +200,14 @@ create table Admin
 	[Password Limit Reached] bit
 )
 go
-Insert into Admin(AdminID,Password,Name) values('Judy4151','Judy','kdjme3234');
-go
-Insert into Admin(AdminID,Password,Name) values('Blake3451','Blake','flaked3102');
-go
-Insert into Admin(AdminID,Password,Name) values('Jane1894','Jane','mvkd212334@!');
-go
-Insert into Admin(AdminID,Password,Name) values('Sham31475','Sham','duillsdj4762');
-go
-Insert into Admin(AdminID,Password,Name) values('Ramu7451','Ramu','ramjjf54815');
-go
-select * from Admin
+SET IDENTITY_INSERT [dbo].[Admin] ON
+INSERT INTO [dbo].[Admin] ([AdminID], [Password], [Name], [Adminnum], [Last Password], [Password Limit Reached]) VALUES (N'Blake3451', N'Blake', N'flaked3102', 2, N'2022-03-01 16:40:00', 0)
+INSERT INTO [dbo].[Admin] ([AdminID], [Password], [Name], [Adminnum], [Last Password], [Password Limit Reached]) VALUES (N'Jane1894', N'Jane', N'mvkd212334@!', 3, N'2022-01-31 09:40:00', 1)
+INSERT INTO [dbo].[Admin] ([AdminID], [Password], [Name], [Adminnum], [Last Password], [Password Limit Reached]) VALUES (N'Judy4151', N'Judy', N'kdjme3234', 1, N'2022-02-19 22:50:00', 1)
+INSERT INTO [dbo].[Admin] ([AdminID], [Password], [Name], [Adminnum], [Last Password], [Password Limit Reached]) VALUES (N'Ramu7451', N'Ramu', N'ramjjf54815', 5, N'2022-01-21 02:40:00', 1)
+INSERT INTO [dbo].[Admin] ([AdminID], [Password], [Name], [Adminnum], [Last Password], [Password Limit Reached]) VALUES (N'Sham31475', N'Sham', N'duillsdj4762', 4, N'2022-03-01 23:05:00', 0)
+SET IDENTITY_INSERT [dbo].[Admin] OFF
+
 go
 create PROCEDURE [dbo].[sp_InsertAdmin]
 	-- Add the parameters for the stored procedure here
@@ -272,27 +274,46 @@ go
 go
 create table [Currently Rented]
 (
-	[RentID] varchar(16) primary key not null ,
+	[RentID] varchar(16) not null ,
 	MID varchar(10) foreign key references Movies, 
-	[Mobile Number] varchar(10) unique not null Foreign key references Customers, 
-	[Rented DateTime] DateTime not null,
-	NUM int not null unique IDENTITY(1,1)
+	[Mobile Number] varchar(10) Foreign key references Customers, 
+	[Rented DateTime] DateTime,
+	NUM int not null IDENTITY(1,1)
+	CONSTRAINT ['CR_PK'] PRIMARY KEY CLUSTERED ([RentID] ASC)
 )
-
+go
+SET IDENTITY_INSERT [dbo].[Currently Rented] ON
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'T3En485220311', N'T3EnRo', N'4851578912', N'2022-03-11 19:12:20', 4)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'I5En485220301', N'I5EnSc', N'4851578912', N'2022-03-01 10:47:45', 5)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'T5En485220227', N'T5EnSc', N'4851578912', N'2022-02-27 13:21:25', 14)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'A1En485220305', N'A1EnSc', N'4851578912', N'2022-03-05 09:14:12', 15)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'T5En745220105', N'T5EnSc', N'7451512684', N'2022-01-05 05:04:32', 1)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'A1En745220228', N'A1EnSc', N'7451512684', N'2022-02-28 09:44:45', 6)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'I5En892220115', N'I5EnSc', N'8921254251', N'2022-01-15 07:47:47', 11)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'I5En974220129', N'I5EnAd', N'9745114562', N'2022-01-29 04:45:58', 3)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'I5En974220221', N'I5EnSc', N'9745114562', N'2022-02-21 19:54:20', 8)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'A1En974220310', N'A1EnSc', N'9745114562', N'2022-03-10 19:54:20', 13)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'T3En974211229', N'T3EnRo', N'9745114562', N'2021-12-29 19:54:20', 2)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'T5En974220129', N'T5EnSc', N'9745114562', N'2022-01-29 19:54:20', 7)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'I5En984220211', N'I5EnAd', N'9845512354', N'2022-02-11 19:54:20', 9)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'T3En984220305', N'T3EnRo', N'9845512354', N'2022-03-05 19:54:20', 12)
+INSERT INTO [dbo].[Currently Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [NUM]) VALUES (N'T5En984220230', N'T5EnSc', N'9845512354', N'2022-02-25 19:54:20', 10)
+SET IDENTITY_INSERT [dbo].[Currently Rented] OFF
 go
 create PROCEDURE [dbo].[sp_InsertCR]
 	-- Add the parameters for the stored procedure here
 	@MID varchar(10), 
-	@MN varchar(10),
-	@RentDT DateTime
+	@MN varchar(10)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-	declare @RentID varchar(20), @TS smallint , @midt varchar(10);
-	set @RentID = @MID + substring(@MN,1,3);
+	declare @RentID varchar(20), @TS smallint , @midt varchar(10),@RentDT DateTime, @Cr varchar(10);
 	SET @RentDT = CURRENT_TIMESTAMP;
+	set @Cr = convert(varchar(20),@RentDT,12);
+	set @RentID = @MID + substring(@MN,1,3) + @cr;
+	
 
 	SELECT @TS = [Total Stock], @midt = [Movie ID] FROM Movies as m where m.[Movie ID] = @MID
 	update Movies set [Stock Available] = [Stock Available] - 1, [Total Units rented] = [Total Units rented] + 1 where @MID = @midt
@@ -304,19 +325,15 @@ go
 CREATE PROCEDURE [dbo].Sp_UpdateCR
 	@RentID varchar(16),
 	@MID varchar(6), 
-	@MN varchar(10),
-	@RentDT DateTime
+	@MN varchar(10)
 AS
 declare @TS smallint , @midt varchar(10);
-	set @RentID = @MID + substring(@MN,1,3);
-	SET @RentDT = CURRENT_TIMESTAMP;
 
 	SELECT @TS = [Total Stock], @midt = [Movie ID] FROM Movies as m where m.[Movie ID] = @MID
 	update Movies set [Stock Available] = [Stock Available] - 1, [Total Units rented] = [Total Units rented] + 1 where @MID = @midt
 	UPDATE[Currently Rented]
 	Set  MID = @MID,
-	[Mobile Number] = @MN,
-	[Rented DateTime] = @RentDT
+	[Mobile Number] = @MN
 	where @RentID = RentID;
 RETURN 0
 
@@ -326,16 +343,23 @@ go
 go
 create table [Movies Rented]
 (
-	[RentID] varchar(10) primary key not null,
+	[RentID] varchar(16) primary key not null,
 	MID varchar(10) foreign key references Movies, 
-	[Mobile Number] varchar(10) unique not null Foreign key references Customers,
+	[Mobile Number] varchar(10) not null Foreign key references Customers,
 	[Rented DateTime] DateTime not null ,
-	[Returned DateTime] DateTime not null,
-	[Days Rented] int,
-	[Rent Amount] money not null,
-	[Returned] bit,
-    [Paid Or Not] bit not null, 
+	[Returned DateTime] DateTime null,
+	[Days Rented] int default 0,
+	[Rent Amount] money default 0.0,
+	[Returned] bit default 0,
+    [Paid Or Not] bit not null default 0, 
 )
+
+go
+INSERT INTO [dbo].[Movies Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [Returned DateTime], [Days Rented], [Rent Amount], [Returned], [Paid Or Not]) VALUES (N'A1En892220310', N'A1EnSc', N'8921254251', N'2022-03-10 21:45:00', N'2022-03-11 21:45:00', 1, CAST(256.0000 AS Money), 1, 0)
+INSERT INTO [dbo].[Movies Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [Returned DateTime], [Days Rented], [Rent Amount], [Returned], [Paid Or Not]) VALUES (N'I5En745220115', N'I5EnSc', N'7451512684', N'2022-01-15 21:45:00', N'2022-02-04 21:45:00', 20, CAST(256.0000 AS Money), 1, 0)
+INSERT INTO [dbo].[Movies Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [Returned DateTime], [Days Rented], [Rent Amount], [Returned], [Paid Or Not]) VALUES (N'I5En974220311', N'I5EnAd', N'9745114562', N'2022-03-11 21:45:00', N'2022-03-11 21:45:00', 60, CAST(256.0000 AS Money), 1, 0)
+INSERT INTO [dbo].[Movies Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [Returned DateTime], [Days Rented], [Rent Amount], [Returned], [Paid Or Not]) VALUES (N'T3EN984220103', N'T3EnRo', N'9845512354', N'2022-03-01 21:45:00', N'2022-03-11 21:45:00', 10, CAST(256.0000 AS Money), 1, 0)
+INSERT INTO [dbo].[Movies Rented] ([RentID], [MID], [Mobile Number], [Rented DateTime], [Returned DateTime], [Days Rented], [Rent Amount], [Returned], [Paid Or Not]) VALUES (N'T5En485110101', N'T5EnSc', N'4851578912', N'2022-01-01 21:45:00', NULL, 0, CAST(0.0000 AS Money), 0, 0)
 
 go
 create PROCEDURE [dbo].[sp_InsertMR]
@@ -348,9 +372,9 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	declare @RentAmount money,@BRP money, @RentDT DateTime, @DaysR int,@MID varchar(10),@MN varchar(10),@ReturnDT DateTime;
-	Select @RentID = RentID,@RentDT = [Rented DateTime],@MID = MID,@MN = [Mobile Number] from [Currently Rented] as cr where cr.RentID = @RentID;
+	Select @RentDT = [Rented DateTime],@MID = MID,@MN = [Mobile Number] from [Currently Rented] as cr where cr.RentID = @RentID;
 	select @BRP =[BlueRay Price] from Movies as m where m.[Movie ID] = @MID 
-
+	
 	SET NOCOUNT ON;
 	SET @ReturnDT = CURRENT_TIMESTAMP  while (@Returned = 1)
 	set @DaysR = Datediff(day ,@RentDT,@ReturnDT) while (@Returned = 1)
@@ -359,6 +383,7 @@ BEGIN
     -- Insert statements for procedure here
 	Insert into [Movies Rented] (RentID,MID,[Mobile Number],[Rented DateTime],[Returned DateTime],[Rent Amount],[Paid Or Not]) 
 	values(@RentID,@MID,@MN,@RentDT,@ReturnDT,@RentAmount,@PON);
+	delete from [Currently Rented] where @RentID = RentID;
 END
 
 go
@@ -368,7 +393,7 @@ CREATE PROCEDURE [dbo].Sp_UpdateMR
     @PON bit
 AS
 	declare @RentAmount money,@BRP money, @RentDT DateTime, @DaysR int,@MID varchar(10),@MN varchar(10),@ReturnDT DateTime;
-	Select @RentID = RentID,@RentDT = [Rented DateTime],@MID = MID,@MN = [Mobile Number] from [Currently Rented] as cr where cr.RentID = @RentID;
+	Select @RentID = RentID,@RentDT = [Rented DateTime],@MID = MID,@MN = [Mobile Number] from [Movies Rented] as cr where cr.RentID = @RentID;
 	select @BRP =[BlueRay Price] from Movies as m where m.[Movie ID] = @MID
 
 	SET NOCOUNT ON;
