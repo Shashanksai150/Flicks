@@ -19,22 +19,13 @@ create table Movies
 	[Total Units rented] smallint,
 	[Revenue Generated] money
 )
-go
-    -- Insert statements for procedure here
-	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
-	values('A1EnSc','Avatar','English',2009,'Sci-fi/Action',1310.00,7.9,50,50);
-go
-	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
-	values('T3EnRo','Titanic','English',1997,'Romance/Drama',1010.05,7.9,100,100);	
-go
-	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
-	values('I5EnSc','Inception','English',2010,'Sci-fi/Action',565.05,8.8,60,60);
-go
-	Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
-	values('T5EnSc','Tenet','English',2020,'Sci-fi/Action',565.05,7.4,40,40);
-go
-Insert into Movies([Movie ID],Title,[Language],[Year],Genres,[BlueRay Price],Rating,[Total Stock],[Stock Available]) 
-	values('I5EnAd','Interstellar','English',2014,'Adventure/Sci-fi',999.05,8.7,90,90);
+SET IDENTITY_INSERT [dbo].[Movies] ON
+INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [Year], [Rating], [Stock Available], [Total Stock], [BlueRay Price], [Total Units rented], [Revenue Generated]) VALUES (N'A1EnSc', N'Avatar', 1, N'English', N'Sci-fi/Action', 2009, CAST(8 AS Decimal(18, 0)), 25, 50, CAST(1310.0000 AS Money), 500, CAST(10000.0000 AS Money))
+INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [Year], [Rating], [Stock Available], [Total Stock], [BlueRay Price], [Total Units rented], [Revenue Generated]) VALUES (N'I5EnAd', N'Interstellar', 5, N'English', N'Adventure/Sci-fi', 2014, CAST(9 AS Decimal(18, 0)), 90, 90, CAST(999.0500 AS Money), 158, CAST(9151.5500 AS Money))
+INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [Year], [Rating], [Stock Available], [Total Stock], [BlueRay Price], [Total Units rented], [Revenue Generated]) VALUES (N'I5EnSc', N'Inception', 3, N'English', N'Sci-fi/Action', 2010, CAST(9 AS Decimal(18, 0)), 60, 60, CAST(565.0500 AS Money), 100, CAST(15124.1200 AS Money))
+INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [Year], [Rating], [Stock Available], [Total Stock], [BlueRay Price], [Total Units rented], [Revenue Generated]) VALUES (N'T3EnRo', N'Titanic', 2, N'English', N'Romance/Drama', 1997, CAST(8 AS Decimal(18, 0)), 100, 100, CAST(1010.0500 AS Money), 999, CAST(14521.2560 AS Money))
+INSERT INTO [dbo].[Movies] ([Movie ID], [Title], [Mnum], [Language], [Genres], [Year], [Rating], [Stock Available], [Total Stock], [BlueRay Price], [Total Units rented], [Revenue Generated]) VALUES (N'T5EnSc', N'Tenet', 4, N'English', N'Sci-fi/Action', 2020, CAST(7 AS Decimal(18, 0)), 40, 40, CAST(565.0500 AS Money), 485, CAST(15415.5200 AS Money))
+SET IDENTITY_INSERT [dbo].[Movies] OFF
 select * from Movies
 
 

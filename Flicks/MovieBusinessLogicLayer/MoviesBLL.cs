@@ -20,7 +20,7 @@ namespace MovieBusinessLogicLayer
                     throw new MovieNotException("Movie cannot be null.");
                 }
 
-                if (m.MovieID <= 0)
+                if (m.Mnum <= 0)
                 {
                     throw new MovieNotException("Movie ID cannot be less than 1.");
                 }
@@ -33,6 +33,16 @@ namespace MovieBusinessLogicLayer
                 if (m.Language.Length > 30 || m.Language.Length < 0)
                 {
                     throw new MovieNotException("Movie language cannot be less than 1 or greater than 30.");
+                }
+
+                if (string.IsNullOrEmpty(m.MovieID))
+                {
+                    throw new MovieNotException("Movie ID cannot be null.");
+                }
+
+                if (m.MovieID.Length > 16 || m.MovieID.Length < 0)
+                {
+                    throw new MovieNotException("Movie title cannot be less than 1 or greater than 30.");
                 }
 
                 if (string.IsNullOrEmpty(m.Title))
@@ -129,6 +139,46 @@ namespace MovieBusinessLogicLayer
             List<Movie> list = new List<Movie>();
             MoviesDAL DAl = new MoviesDAL();
             list = DAl.GetAllMovies();
+            return list;
+        }
+
+        public List<Movie> GetAllMoviesByTLG(string vari)
+        {
+            List<Movie> list = new List<Movie>();
+            MoviesDAL dal = new MoviesDAL();
+            dal.GetAllMoviesByTLG(vari);
+            return list;
+        }
+
+        public List<Movie> GetAllMoviesByYear(int year)
+        {
+            List<Movie> list = new List<Movie>();
+            MoviesDAL dal = new MoviesDAL();
+            dal.GetAllMoviesByYear(year);
+            return list;
+        }
+
+        public List<Movie> GetAllhighratedMovies()
+        {
+            List<Movie> list = new List<Movie>();
+            MoviesDAL dal = new MoviesDAL();
+            dal.GetAllhighratedMovies();
+            return list;
+        }
+
+        public List<Movie> GetAllLowRatedMovies()
+        {
+            List<Movie> list = new List<Movie>();
+            MoviesDAL dal = new MoviesDAL();
+            dal.GetAllLowRatedMovies();
+            return list;
+        }
+
+        public List<Movie> GetAllTop10Movies()
+        {
+            List<Movie> list = new List<Movie>();
+            MoviesDAL dal = new MoviesDAL();
+            dal.GetAllTop10Movies();
             return list;
         }
     }
