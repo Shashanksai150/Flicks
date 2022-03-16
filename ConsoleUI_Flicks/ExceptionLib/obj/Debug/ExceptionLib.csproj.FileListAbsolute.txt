@@ -1,0 +1,8 @@
+F:\CAPGEMINI TRAINING\projects\ConsoleUI_Flicks\ExceptionLib\obj\Debug\ExceptionLib.csprojAssemblyReference.cache
+F:\CAPGEMINI TRAINING\projects\ConsoleUI_Flicks\ExceptionLib\obj\Debug\ExceptionLib.csproj.CoreCompileInputs.cache
+D:\Flicks\ConsoleUI_Flicks\ExceptionLib\bin\Debug\ExceptionLib.dll
+D:\Flicks\ConsoleUI_Flicks\ExceptionLib\bin\Debug\ExceptionLib.pdb
+D:\Flicks\ConsoleUI_Flicks\ExceptionLib\obj\Debug\ExceptionLib.csproj.AssemblyReference.cache
+D:\Flicks\ConsoleUI_Flicks\ExceptionLib\obj\Debug\ExceptionLib.csproj.CoreCompileInputs.cache
+D:\Flicks\ConsoleUI_Flicks\ExceptionLib\obj\Debug\ExceptionLib.dll
+D:\Flicks\ConsoleUI_Flicks\ExceptionLib\obj\Debug\ExceptionLib.pdb

@@ -1,0 +1,12 @@
+F:\CAPGEMINI TRAINING\projects\ConsoleUI_Flicks\DataAccessLayerLib\obj\Debug\DataAccessLayerLib.csproj.CoreCompileInputs.cache
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\bin\Debug\DataAccessLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\bin\Debug\DataAccessLayerLib.pdb
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\bin\Debug\EntityLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\bin\Debug\ExceptionLib.dll
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\bin\Debug\EntityLayerLib.pdb
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\bin\Debug\ExceptionLib.pdb
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\obj\Debug\DataAccessLayerLib.csproj.AssemblyReference.cache
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\obj\Debug\DataAccessLayerLib.csproj.CoreCompileInputs.cache
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\obj\Debug\DataAccessLayerLib.csproj.CopyComplete
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\obj\Debug\DataAccessLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\DataAccessLayerLib\obj\Debug\DataAccessLayerLib.pdb

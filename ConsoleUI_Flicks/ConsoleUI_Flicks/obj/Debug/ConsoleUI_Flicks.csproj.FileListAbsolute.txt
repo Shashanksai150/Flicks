@@ -1,0 +1,19 @@
+F:\CAPGEMINI TRAINING\projects\ConsoleUI_Flicks\ConsoleUI_Flicks\obj\Debug\ConsoleUI_Flicks.csprojAssemblyReference.cache
+F:\CAPGEMINI TRAINING\projects\ConsoleUI_Flicks\ConsoleUI_Flicks\obj\Debug\ConsoleUI_Flicks.csproj.CoreCompileInputs.cache
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\ConsoleUI_Flicks.exe.config
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\ConsoleUI_Flicks.exe
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\ConsoleUI_Flicks.pdb
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\BusinessLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\EntityLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\ExceptionLib.dll
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\DataAccessLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\BusinessLayerLib.pdb
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\EntityLayerLib.pdb
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\ExceptionLib.pdb
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\bin\Debug\DataAccessLayerLib.pdb
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\obj\Debug\ConsoleUI_Flicks.csproj.AssemblyReference.cache
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\obj\Debug\ConsoleUI_Flicks.csproj.SuggestedBindingRedirects.cache
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\obj\Debug\ConsoleUI_Flicks.csproj.CoreCompileInputs.cache
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\obj\Debug\ConsoleUI_Flicks.csproj.CopyComplete
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\obj\Debug\ConsoleUI_Flicks.exe
+D:\Flicks\ConsoleUI_Flicks\ConsoleUI_Flicks\obj\Debug\ConsoleUI_Flicks.pdb

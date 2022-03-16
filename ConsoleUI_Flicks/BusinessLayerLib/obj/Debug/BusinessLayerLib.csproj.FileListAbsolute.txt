@@ -1,0 +1,14 @@
+F:\CAPGEMINI TRAINING\projects\ConsoleUI_Flicks\BusinessLayerLib\obj\Debug\BusinessLayerLib.csproj.CoreCompileInputs.cache
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\bin\Debug\BusinessLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\bin\Debug\BusinessLayerLib.pdb
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\bin\Debug\DataAccessLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\bin\Debug\EntityLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\bin\Debug\ExceptionLib.dll
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\bin\Debug\DataAccessLayerLib.pdb
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\bin\Debug\EntityLayerLib.pdb
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\bin\Debug\ExceptionLib.pdb
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\obj\Debug\BusinessLayerLib.csproj.AssemblyReference.cache
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\obj\Debug\BusinessLayerLib.csproj.CoreCompileInputs.cache
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\obj\Debug\BusinessLayerLib.csproj.CopyComplete
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\obj\Debug\BusinessLayerLib.dll
+D:\Flicks\ConsoleUI_Flicks\BusinessLayerLib\obj\Debug\BusinessLayerLib.pdb
